@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Documentjs</title>
+</head>
+<style>
+body{background-image:url("car.jpg");
+    background: #c84545;
+      margin: 0 auto 0 auto;
+      width: 100%;
+      text-align: center;
+      margin: 20px 0px 20px 
+  }
+  
+  /*#loginBtn{
+    background: #2ecc71;
+      width: 125px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      border: #27ae60 1px solid;
+      margin-top: 20px; 
+      font-weight: 800; */
+  
+  #loginDiv{
+      text-align: center;
+      background: white;
+      width: 380px;
+      border-radius: 6px;
+      margin: 0 auto 0 auto;
+      padding: 0px 0px 70px 0px;
+      border:#2e375f 4px solid;
+      margin-top: 138px;
+   }
+   #email{
+      margin-bottom: 12.5px;
+      background: #ecf0f1;
+      border: #ccc 1px solid;
+      border-bottom: #ccc 2px solid;
+      padding: 8px;
+      width: 250px;
+      
+      margin-top: 10px;
+      font-size: 1em;
+      border-radius: 4px;
+   }
+  #password{
+     background: #ecf0f1;
+      border: #ccc 1px solid;
+      border-bottom: #ccc 2px solid;
+      padding: 8px;
+      width: 250px;
+      
+      margin-top: 10px;
+      font-size: 1em;
+      border-radius: 4px;
+      margin-left: 23px;
+  }
+   #loginHeader{
+      font-size: 1.5em;
+      color: #525252;
+      font-family: 'Open Sans', sans-serif;
+   }
+   #signupHeader{
+     font-size: 1.5em;
+      color: #525252;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 37px;
+      margin-bottom: 30px;
+   }
+   #signupDiv{
+      text-align: center;
+      background: white;
+      width: 500px;
+      border-radius: 6px;
+      margin: 0 auto 0 auto;
+      padding: 0px 0px 70px 0px;
+      border:#2e375f 4px solid;
+     
+   }
+   #firstName, #time{
+      margin-bottom: 12.5px;
+      background: #ecf0f1;
+      border: #ccc 1px solid;
+      border-bottom: #ccc 2px solid;
+      padding: 8px;
+      width: 302px;
+      
+      margin-top: 10px;
+      font-size: 1em;
+      border-radius: 4px;
+   }
+   .email{
+      margin-bottom: 12.5px !important;
+      background: #ecf0f1 !important;
+      border: #ccc 1px solid !important;
+      border-bottom: #ccc 2px solid !important;
+      padding: 8px !important;
+      width: 302px !important;
+      
+      margin-top: 10px !important;
+      font-size: 1em !important;
+      border-radius: 4px !important;
+   }
+   .password, #rePassword{
+      margin-bottom: 12.5px !important;
+      background: #ecf0f1 !important;
+      border: #ccc 1px solid !important;
+      border-bottom: #ccc 2px solid !important;
+      padding: 8px !important;
+      width: 302px !important;
+      
+      margin-top: 10px !important;
+      font-size: 1em !important;
+      border-radius: 4px !important;
+      margin-left: 0 !important;
+   }
+   #signupBtn, #logoutBtn{
+      background: #d26c55;
+      width: 125px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      border: #2e375f 1px solid;
+      margin-top: 20px;
+      font-weight: 800;
+  }
+  #gender{
+     margin-bottom: 12.5px;
+      background: #ecf0f1;
+      border: #ccc 1px solid;
+      border-bottom: #ccc 2px solid;
+      padding: 8px;
+      width: 319px;
+      margin-top: 10px;
+      font-size: 1em;
+      border-radius: 4px;
+  }
+  #dashboardHeader{
+      text-align: center;
+      background: white;
+      width: 590px;
+      border-radius: 6px;
+      margin: 0 auto 0 auto;
+      padding: 0px 0px 70px 0px;
+      border: #2980b9 4px solid; 
+  }
+  .dashboardEmail{
+       margin-bottom: 0 !important; 
+       background: none !important; 
+       border: none !important; 
+       border-bottom: none !important; 
+       padding: 0 !important; 
+       width: 250px !important; 
+       margin-top: 0 !important; 
+       font-size: 1em !important; 
+       border-radius: 0 !important;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 50px;
+      padding-right: 41px;
+  }
+  th, tr, td{
+    border: 3px solid greenyellow;
+  }
+  #dashboardTbl{
+    margin: auto;
+    color: black!important;
+    border: 3px solid greenyellow;
+    font-size: 1em;
+      color: #525252;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 37px;
+      margin-bottom: 30px;
+  }
+  #dashboardHeader h1{
+    font-family: "Open Sans", sans-serif;
+  }
+  #localStorageHeader{
+      font-size: 1.5em;
+      color: #525252;
+      font-family: 'Open Sans', sans-serif;
+      }
+  #addUserBtn{
+    background: #2ecc71;
+      width: 125px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      border: #27ae60 1px solid;
+      margin-top: 20px;
+      font-weight: 800;
+  }
+  #otherPageMove{
+      background: #2ecc71;
+      width: 162px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: white;
+      border-radius: 4px;
+      border: #27ae60 1px solid;
+      margin-top: 20px;
+      font-weight: 800;
+  }
+  #localStorageDiv{
+      text-align:right;
+      background: white;
+      width: 380px;
+      border-radius: 6px;
+      margin: 0 auto 0 auto;
+      padding: 0px 0px 70px 0px;
+      border: #2e375f 4px solid;
+      margin-top: 138px;
+  }
+  #loading {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;	
+    background-color: #fff;
+    z-index: 99;
+  }
+  
+  #loading-image {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    z-index: 100;
+  }
+  #result{
+    padding: 32px;
+      border: 1px solid var(--grey-light);
+      box-shadow: 0 3px 20px 10px rgb(10 8 59 / 12%);
+      background-color: #fff!important;
+      position: absolute;
+      bottom: 15px;
+      text-align: center;
+      width: 35%;
+      left: 405px;
+      font-size: larger;
+      box-shadow: 7px 2px 17px 2px;
+      background: #2e375f !important;
+      font-family: sans-serif;
+      display: none;
+      bottom: 207px;
+      color: #fff;
+  }
+  #btnx{
+        height: 30px;
+        border-radius:30px;
+        font-size: large;
+        background-color: #2e375f;
+        color: #fff;
+    }
+    
+  </style>
+
+<body>
+	<p id="result">
+	  Thank you! for getting in touch!<br>
+      we appreciate you contacting us, <br>
+      One of our colleagues will get back in touch with you soon!
+	</p>
+  <div id="signupDiv">
+     
+    <h1 id="signupHeader">WELCOME OUR CAR REPAIR-SHOP</h1>
+    <p><b>please Fill THe Form And Get Appoinment For More Services</b></p>
+     
+    <form onsubmit="doSignup(event)">
+
+        
+        <input id="firstName" type="text" required id="firstName" placeholder="First Name"> <br>
+
+        <input id="email" type="email" required class="email" placeholder="Email"> <br>
+        
+            <select id="time" name="time">
+              <option value="australia">Appoinment Time</option>
+              <option value="Time">Mon To Wed/9:00PM</option>
+              <option value="Time">Sat/12:PM To 5:00PM</option>
+            </select>
+          
+        
+        <select name="gender" id="gender">
+			<option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+		
+
+        <br>
+        
+       
+
+        
+        <input id="password" type="password" required min="6" class="password" placeholder="Password"> <br>
+
+        
+        <input id="rePassword" type="password" required min="6" placeholder="Repeat Password" > <br>
+
+        <button type="submit" id="signupBtn">Signup</button>
+    </form>
+    <br>
+    <bold>lets back Home Page</bold> <a href="index.html"><button id="btnx" style="width:30%;">Home</button></a>
+
+    <p id="error" style="color: rgb(233, 220, 220)"></p>
+    
+
+
+
+    <script>
+
+        let users = [];
+
+        (() => {
+
+            let item = localStorage.getItem("users");
+
+            if (item) users = JSON.parse(item);
+
+            let loggedInUser = localStorage.getItem("loggedInUser");
+            if (loggedInUser) {
+                window.location.href = "./dashboard.html"
+                return;
+            }
+
+        })()
+
+
+
+        function doSignup(e) {
+            e.preventDefault();
+
+            let firstName = document.querySelector("#firstName").value;
+            let email = document.querySelector("#email").value;
+            let time = document.querySelector("#time").value;
+            let gender = document.querySelector("#gender").value;
+            
+            let password = document.querySelector("#password").value;
+            let rePassword = document.querySelector("#rePassword").value;
+
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email) {
+                    document.querySelector("#error").innerText = "this email is already exist";
+                    return;
+                }
+            }
+
+            if (password !== rePassword) {
+                document.querySelector("#error").innerText = "password and repeat password doesnt match"
+                return;
+            }
+
+            let newUser = {
+                firstName,
+                email,
+                time,
+                gender,
+                password,
+                rePassword,
+            }
+
+
+            users.push(newUser);
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            //document.querySelector("#result").innerText = "signup successful";
+            setTimeout(function() {document.getElementById('result').style.display='block'}, 1000); 
+			
+            setTimeout(() => {
+               //document.querySelector("#result").innerText = "";
+			    document.getElementById('result').style.display ='none'
+                document.querySelector("#error").innerText = "";
+            }, 9000);
+
+            e.target.reset();
+        }
+
+
+    </script>
+
+</body>
+
+</html>
